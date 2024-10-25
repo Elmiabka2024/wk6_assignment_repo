@@ -1,25 +1,25 @@
-<<<<<<< HEAD
 def lone_sum(a, b, c):
-    if a >= b:
+    # If all three values are the same, return 0
+    if a == b == c:
+        return 0
+    # If a and b are the same, return only c
+    elif a == b:
         return c
+    # If a and c are the same, return only b
     elif a == c:
         return b
+    # If b and c are the same, return only a
     elif b == c:
         return a
-    elif a == b and a == c and b == c:
-        return 0
+    # If all values are unique, return their sum
     else:
-        return a+b+c
+        return a + b + c
+
+# Test cases for lone_sum
 print("lone_sum of 10, 10, 10 should be 0: " + str(lone_sum(10, 10, 10)))
 print("lone_sum of 1, 2, 3 should be 6: " + str(lone_sum(1, 2, 3)))
 print("lone_sum of 1, 2, 1 should be 2: " + str(lone_sum(1, 2, 1)))
 print("lone_sum of 4, 5, 6 should be 15: " + str(lone_sum(4, 5, 6)))
-=======
-def multiply(a, b):
-    return a * b
 
-# Test the function
-result = multiply(2, 3)  # Provide both arguments
-print("The result is:", result)
-
->>>>>>> 734e68e110b756b41d8c310f8794c8f4f1237e45
+# Additional test cases to validate lone_sum behavior
+print("lone_sum of 7, 7, 9 should be 9: " + str(lone_sum(7, 7, 9)))
