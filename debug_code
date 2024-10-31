@@ -23,3 +23,5 @@ print("lone_sum of 4, 5, 6 should be 15: " + str(lone_sum(4, 5, 6)))
 
 # Additional test cases to validate lone_sum behavior
 print("lone_sum of 7, 7, 9 should be 9: " + str(lone_sum(7, 7, 9)))
+
+#Test for merge
