@@ -1,16 +1,32 @@
 def lone_sum(a, b, c):
+    # Check if all three numbers are the same
     if a == b and a == c and b == c:
-        return 0
-    elif a >= b:
-        return c
+        return 0  # Return 0 if all numbers are duplicates
+
+    # Check if the first and second numbers are the same
+    elif a == b:
+        return c  # Return only the third number if the first two are duplicates
+
+    # Check if the first and third numbers are the same
     elif a == c:
-        return b
+        return b  # Return only the second number if the first and third are duplicates
+
+    # Check if the second and third numbers are the same
     elif b == c:
-        return a
+        return a  # Return only the first number if the last two are duplicates
 
     else:
-        return a+b+c
+        # If all numbers are unique, return their sum
+        return a + b + c
+
+# Test cases
 print("lone_sum of 10, 10, 10 should be 0: " + str(lone_sum(10, 10, 10)))
 print("lone_sum of 1, 2, 3 should be 6: " + str(lone_sum(1, 2, 3)))
 print("lone_sum of 1, 2, 1 should be 2: " + str(lone_sum(1, 2, 1)))
 print("lone_sum of 4, 5, 6 should be 15: " + str(lone_sum(4, 5, 6)))
+
+#Explanation
+#Each condition checks if there are duplicates among a, b, and c.
+#If all three numbers are the same, it returns 0.
+#If only two numbers are the same, it returns the unique number.
+#If all numbers are different, it sums them up and returns the result.
